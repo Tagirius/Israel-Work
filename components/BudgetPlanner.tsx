@@ -24,41 +24,41 @@ const BudgetPlanner: React.FC = () => {
 
         <FadeInSection delay="200ms">
           <div className="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
-            {/* Tabs */}
-            <div className="flex border-b border-gray-100 overflow-x-auto">
+            {/* Tabs - Stacked on mobile, Horizontal on desktop */}
+            <div className="flex flex-col md:flex-row border-b border-gray-100">
               <button
                 onClick={() => setActiveTab('salary')}
-                className={`flex-1 py-4 px-6 text-sm md:text-base font-bold flex items-center justify-center gap-2 transition-all whitespace-nowrap ${
+                className={`flex-1 py-3 md:py-4 px-5 md:px-6 text-sm md:text-base font-bold flex items-center justify-start md:justify-center gap-3 md:gap-2 transition-all whitespace-nowrap ${
                   activeTab === 'salary' 
-                    ? 'text-primary-600 bg-primary-50 border-b-2 border-primary-600' 
-                    : 'text-gray-500 hover:text-gray-800 hover:bg-gray-50'
+                    ? 'text-primary-600 bg-primary-50 border-l-4 md:border-l-0 md:border-b-2 border-primary-600' 
+                    : 'text-gray-500 hover:text-gray-800 hover:bg-gray-50 border-l-4 md:border-l-0 md:border-b-2 border-transparent'
                 }`}
               >
-                <Calculator size={20} />
+                <Calculator size={20} className={activeTab === 'salary' ? 'text-primary-600' : 'text-gray-400'} />
                 {t.budget.tabs.salary}
               </button>
               
               <button
                 onClick={() => setActiveTab('flight')}
-                className={`flex-1 py-4 px-6 text-sm md:text-base font-bold flex items-center justify-center gap-2 transition-all whitespace-nowrap ${
+                className={`flex-1 py-3 md:py-4 px-5 md:px-6 text-sm md:text-base font-bold flex items-center justify-start md:justify-center gap-3 md:gap-2 transition-all whitespace-nowrap ${
                   activeTab === 'flight' 
-                    ? 'text-primary-600 bg-primary-50 border-b-2 border-primary-600' 
-                    : 'text-gray-500 hover:text-gray-800 hover:bg-gray-50'
+                    ? 'text-primary-600 bg-primary-50 border-l-4 md:border-l-0 md:border-b-2 border-primary-600' 
+                    : 'text-gray-500 hover:text-gray-800 hover:bg-gray-50 border-l-4 md:border-l-0 md:border-b-2 border-transparent'
                 }`}
               >
-                <Plane size={20} />
+                <Plane size={20} className={activeTab === 'flight' ? 'text-primary-600' : 'text-gray-400'} />
                 {t.budget.tabs.flight}
               </button>
 
               <button
                 onClick={() => setActiveTab('food')}
-                className={`flex-1 py-4 px-6 text-sm md:text-base font-bold flex items-center justify-center gap-2 transition-all whitespace-nowrap ${
+                className={`flex-1 py-3 md:py-4 px-5 md:px-6 text-sm md:text-base font-bold flex items-center justify-start md:justify-center gap-3 md:gap-2 transition-all whitespace-nowrap ${
                   activeTab === 'food' 
-                    ? 'text-primary-600 bg-primary-50 border-b-2 border-primary-600' 
-                    : 'text-gray-500 hover:text-gray-800 hover:bg-gray-50'
+                    ? 'text-primary-600 bg-primary-50 border-l-4 md:border-l-0 md:border-b-2 border-primary-600' 
+                    : 'text-gray-500 hover:text-gray-800 hover:bg-gray-50 border-l-4 md:border-l-0 md:border-b-2 border-transparent'
                 }`}
               >
-                <Utensils size={20} />
+                <Utensils size={20} className={activeTab === 'food' ? 'text-primary-600' : 'text-gray-400'} />
                 {t.budget.tabs.food}
               </button>
             </div>

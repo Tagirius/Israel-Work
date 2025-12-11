@@ -32,19 +32,19 @@ const MainContent: React.FC = () => {
             alt="Tel Aviv Skyline" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary-900/90 to-primary-800/60" />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary-900/95 to-primary-800/80" />
         </div>
 
-        <div className="container mx-auto px-4 md:px-6 relative z-10 text-center md:text-left">
+        <div className="container mx-auto px-4 md:px-6 relative z-10 text-center md:text-left pt-24 md:pt-0">
           <div className="max-w-3xl">
             <FadeInSection>
-              <div className="inline-block px-4 py-1.5 bg-secondary-500 text-white text-xs font-bold rounded-full mb-6 uppercase tracking-wider">
+              <div className="hidden md:inline-block px-4 py-1.5 bg-secondary-500 text-white text-xs font-bold rounded-full mb-6 uppercase tracking-wider">
                 {t.hero.badge}
               </div>
               <h1 className="text-4xl md:text-6xl md:leading-tight font-extrabold text-white mb-6 drop-shadow-md">
                 {t.hero.title}
               </h1>
-              <p className="text-lg md:text-xl text-primary-100 mb-8 max-w-xl leading-relaxed">
+              <p className="text-lg md:text-xl text-white/90 mb-8 max-w-xl leading-relaxed drop-shadow-sm font-medium">
                 {t.hero.subtitle}
               </p>
               
